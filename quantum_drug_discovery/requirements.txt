@@ -1,0 +1,20 @@
+# Core Quantum Libraries
+# PennyLane is the main quantum computing framework.
+pennylane==0.36.0
+
+# PySCF is a powerful electronic structure calculation library
+# and a dependency for pennylane-qchem.
+pyscf==2.6.2
+
+# Machine Learning & Data Handling
+# PyTorch is the framework for building the classical part of the QML model.
+torch==2.3.1
+
+# NumPy is the fundamental package for numerical computation in Python.
+numpy==1.26.4
+
+# Plotting & Notebooks
+# Matplotlib is used for generating plots like the VQE convergence graph.
+matplotlib==3.8.4
+
+# pip install openfermionpyscf

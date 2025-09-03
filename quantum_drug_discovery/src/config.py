@@ -11,7 +11,7 @@ QML_MODEL_PATH = os.path.join(RESULTS_DIR, "qml_model.pth")
 
 # --- VQE Simulation Parameters ---
 VQE_STEPS = 50
-VQE_LEARNING_RATE = 0.1
+VQE_LEARNING_RATE = 0.1 #How aggressively the optimizer adjusts the circuit parameters.
 VQE_BASIS_SET = "sto-3g" # A minimal basis set for speed
 VQE_ACTIVE_ELECTRONS = 2
 VQE_ACTIVE_ORBITALS = 2

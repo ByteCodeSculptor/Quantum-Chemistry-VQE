@@ -18,7 +18,7 @@ def get_hamiltonian(molecule_name: str = "H2"):
     symbols = ["H", "H"]
     coordinates = np.array([0.0, 0.0, -0.6614, 0.0, 0.0, 0.6614])
 
-    # This function uses a built-in dataset and does NOT require pyscf.
+    # useing a built-in dataset and does NOT require pyscf.
     hamiltonian, n_qubits = qml.qchem.molecular_hamiltonian(
         symbols,
         coordinates,

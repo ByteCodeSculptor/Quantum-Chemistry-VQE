@@ -2,7 +2,6 @@
 
 import pennylane as qml
 from pennylane import numpy as np
-import matplotlib.pyplot as plt
 import argparse
 import time
 import os
@@ -63,22 +62,6 @@ def run_vqe(hamiltonian, n_qubits):
 
     return energy_history, energy
 
-def plot_convergence(molecule_name, energy_history):
-    """Saves a plot of the VQE energy convergence."""
-    plt.figure(figsize=(10, 6))
-    plt.plot(range(1, len(energy_history) + 1), energy_history, marker='o', linestyle='-')
-    plt.title(f"VQE Energy Convergence for {molecule_name.upper()}")
-    plt.xlabel("Optimization Step")
-    plt.ylabel("Energy (Hartree)")
-    plt.grid(True)
-
-    # Ensure the plots directory exists
-    os.makedirs(config.PLOTS_DIR, exist_ok=True)
-    save_path = os.path.join(config.PLOTS_DIR, f"{molecule_name}_vqe_convergence.png")
-    plt.savefig(save_path)
-    print(f"Convergence plot saved to {save_path}")
-    plt.close()
-
 
 if __name__ == "__main__":
     # We can simplify the argument parser since we only run H2 now.
@@ -92,4 +75,3 @@ if __name__ == "__main__":
     print(f"Qubits required for H2 simulation: {n_qubits}")
 
     history, final_energy = run_vqe(hamiltonian, n_qubits)
-    plot_convergence(args.molecule, history)

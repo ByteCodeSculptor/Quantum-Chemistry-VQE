@@ -1,0 +1,11 @@
+# Ignore all Python source and environment files
+/src
+/results
+/data
+/notebooks
+__pycache__/
+*.pyc
+*.pth
+*.log
+*.yml
+requirements.txt
